@@ -9,6 +9,7 @@
 | 01 | [Подготовка окружения и запуск Zephyr](labs/01-environment/README.md) | Установка инструментов; UART smoke test — `PASS!`; запуск Zephyr `Hello World` |
 | 02 | [UART-сервис эхо-повтора](labs/02-uart-echo/README.md) | Возврат тестовой строки без изменений; команда `EXIT`; `ALL TESTS PASSED` |
 | 03 | [UART-сервис генерации ключевого материала](labs/03-keygen-service/README.md) | Проверены `STATUS`, `GENKEY`, неизвестная команда и `EXIT`; выдача 32 байт в тестовом режиме |
+| 04 | [UART-сервис состояния](labs/04-uart-status/README.md) | Команды `STATUS`, `BOGUS` и `EXIT` — `PASS`; heartbeat `ALIVE` |
 
 ## Окружение
 
