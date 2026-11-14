@@ -177,12 +177,7 @@ flowchart TD
 
 Синхронизация аппаратных сигналов между тактовыми доменами и синхронизация программных потоков решают разные задачи. Двухступенчатые CDC-синхронизаторы и handshake-протоколы позволяют переносить данные и события между аппаратными доменами. Примитивы Zephyr управляют ожиданием и пробуждением программных контекстов. Совместный анализ RTL, журналов и временных диаграмм необходим для диагностики работы системы.
 
-## 10. Материалы и источники
-
-- [Презентация исследования (PDF)](materials/synchronization-presentation.pdf)
-- [Презентация исследования (PPTX)](materials/synchronization-presentation.pptx)
-- [Исходный текст слайдов (Marp Markdown)](materials/slides.md)
-- [Расширенные заметки к докладу](materials/speaker-notes.md)
+## 10. Источники
 - [Документация OpenTitan](https://opentitan.org/book/)
 - [Документация Zephyr: Semaphores](https://docs.zephyrproject.org/latest/kernel/services/synchronization/semaphores.html)
 
