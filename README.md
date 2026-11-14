@@ -20,7 +20,7 @@
 | [02](opentitan-zephyr/labs/02-uart-echo/README.md) | UART Echo | Обмен данными, `EXIT` |
 | [03](opentitan-zephyr/labs/03-keygen-service/README.md) | Генерация ключевого материала | Тестовый RNG и командный протокол |
 | [04](opentitan-zephyr/labs/04-uart-status/README.md) | UART Status | `STATUS`, `BOGUS`, `EXIT`, heartbeat |
-| [05](opentitan-zephyr/labs/05-mp2fa/README.md) | MP2FA — менеджер паролей и 2FA | Практика `REGISTER → GET + OTP → EXPORT`, скриншоты |
+| [05](opentitan-zephyr/labs/05-mp2fa/README.md) | MP2FA — менеджер паролей и 2FA | `REGISTER → GET + OTP → EXPORT` |
 | [06](opentitan-zephyr/labs/06-synchronization/README.md) | Синхронизация OpenTitan и Zephyr | CDC, REQ/ACK, `k_sem`, диагностика |
 
 ## Технический контекст
