@@ -1,29 +1,36 @@
-# OpenTitan и Zephyr RTOS
+# OpenTitan — теория и лабораторные работы
 
-Лабораторные и практические работы по OpenTitan и Zephyr RTOS. Приложения выполняются в RTL-модели OpenTitan Earlgrey с помощью Verilator.
+Учебный репозиторий по архитектуре **OpenTitan** и разработке приложений для него с использованием **Zephyr RTOS** и **FreeRTOS**.
 
-## Практические работы
+**Темы:** OpenTitan · RISC-V · Embedded Systems · Zephyr RTOS · FreeRTOS · RTL-моделирование
 
-| № | Работа | Результат |
-| :---: | --- | --- |
-| 01 | [Подготовка окружения и запуск Zephyr](labs/01-environment/README.md) | Установка инструментов; UART smoke test — `PASS!`; запуск Zephyr `Hello World` |
-| 02 | [UART-сервис эхо-повтора](labs/02-uart-echo/README.md) | Возврат тестовой строки без изменений; команда `EXIT`; `ALL TESTS PASSED` |
-| 03 | [UART-сервис генерации ключевого материала](labs/03-keygen-service/README.md) | Проверены `STATUS`, `GENKEY`, неизвестная команда и `EXIT`; выдача 32 байт в тестовом режиме |
-| 04 | [UART-сервис состояния](labs/04-uart-status/README.md) | Команды `STATUS`, `BOGUS` и `EXIT` — `PASS`; heartbeat `ALIVE` |
+## Разделы проекта
 
-## Окружение
+| Раздел | Содержание | Статус |
+| --- | --- | --- |
+| [OpenTitan + Zephyr RTOS](opentitan-zephyr/) | 4 лабораторные работы, исходный код и результаты тестирования | Выполнены |
+| [OpenTitan + FreeRTOS](opentitan-freertos/) | Будущие лабораторные работы | Планируется |
+| [Общая теория OpenTitan](opentitan-theory/) | Архитектура, RISC-V, периферия, безопасность и моделирование | Учебные материалы |
 
-| Компонент | Версия |
-| --- | --- |
-| Ubuntu | 24.04 |
-| OpenTitan | `earlgrey_1.0.0` |
-| Verilator | 4.210 |
-| Zephyr RTOS | 3.7.0 |
-| Zephyr SDK | 0.16.8 |
-| Плата Zephyr | `opentitan_earlgrey` |
+## Лабораторные по Zephyr RTOS
 
-## Результаты
+| № | Тема | Результат |
+| --- | --- | --- |
+| [01](opentitan-zephyr/labs/01-environment/) | Настройка окружения и запуск Zephyr | UART smoke test, Hello World |
+| [02](opentitan-zephyr/labs/02-uart-echo/) | UART echo-сервис | Проверка обмена данными и EXIT |
+| [03](opentitan-zephyr/labs/03-keygen-service/) | Сервис генерации ключевого материала | Командный протокол, тестовые данные |
+| [04](opentitan-zephyr/labs/04-uart-status/) | UART-сервис состояния | STATUS, BOGUS, EXIT и heartbeat |
 
-**Эхо-сервис:** Python-клиент подтвердил совпадение отправленных и полученных данных, а также завершение сервиса по команде `EXIT`.
+Подробные версии инструментов, результаты и ограничения экспериментов сохранены в [README раздела Zephyr](opentitan-zephyr/README.md).
 
-**Генерация ключевого материала:** клиент подтвердил формат 64 HEX-символа / 32 байта / 256 бит и работу протокола команд. В выполненной симуляции PSA Crypto вернул `-148`; использован тестовый RNG. Криптографическая стойкость полученных данных не подтверждена.
+## О проекте
+
+Лабораторные Zephyr выполнялись на RTL-модели **OpenTitan Earlgrey** с помощью **Verilator**. Это не означает, что любые приложения под FreeRTOS уже собраны или протестированы: раздел FreeRTOS пока намеренно пуст.
+
+> **Примечание:** OpenTitan — аппаратная платформа с ориентированными на безопасность блоками. Возможность применения определённой RTOS и конкретных драйверов зависит от целевой конфигурации и поддержки платформы.
+
+## Документация
+
+- [Официальная документация OpenTitan](https://opentitan.org/book/)
+- [Документация Zephyr](https://docs.zephyrproject.org/)
+- [Документация FreeRTOS](https://www.freertos.org/)
